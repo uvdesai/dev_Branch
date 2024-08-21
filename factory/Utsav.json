@@ -1,0 +1,9 @@
+{
+	"name": "Utsav",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4c0b65c6-c19a-4e83-98a1-77c68fac5061",
+		"tenantId": "f75c4ee3-4e9c-4f38-a381-7efc85317a66"
+	}
+}

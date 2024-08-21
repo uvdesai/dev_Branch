@@ -1,0 +1,28 @@
+{
+	"name": "DS_ADLS_CopyAllFiles_azurestorageacctraining_retaildb_customerscsv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_AzureDataLakeStorage_customers_csv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "retaildb"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "col_id|col_name|col_exp|col_gen|col_dob|col_company|col_desig|col_doj|col_skills|col_previous_expected_salary",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
