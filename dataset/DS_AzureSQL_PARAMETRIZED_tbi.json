@@ -1,0 +1,45 @@
+{
+	"name": "DS_AzureSQL_PARAMETRIZED_tbi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_AzureSQL_retail_db_customers",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FolderPath": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "age",
+				"type": "nvarchar"
+			},
+			{
+				"name": "gender",
+				"type": "nvarchar"
+			},
+			{
+				"name": "designation",
+				"type": "nvarchar"
+			},
+			{
+				"name": "salary",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().FolderPath",
+				"type": "Expression"
+			}
+		}
+	}
+}

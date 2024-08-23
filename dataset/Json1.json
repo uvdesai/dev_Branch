@@ -1,0 +1,38 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_AzureDataLakeStorage_customers_csv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "users.json",
+				"fileSystem": "customerjson"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"age": {
+					"type": "integer"
+				},
+				"gender": {
+					"type": "string"
+				},
+				"designation": {
+					"type": "string"
+				},
+				"salary": {
+					"type": "integer"
+				}
+			}
+		}
+	}
+}

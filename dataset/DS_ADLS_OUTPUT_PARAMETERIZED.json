@@ -1,0 +1,30 @@
+{
+	"name": "DS_ADLS_OUTPUT_PARAMETERIZED",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_AzureDataLakeStorage_customers_csv",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			},
+			"Subdirectory": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
