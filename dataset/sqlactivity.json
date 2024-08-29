@@ -1,0 +1,37 @@
+{
+	"name": "sqlactivity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DS_AzureSQL_retail_db_customers",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "employee_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "employee_name",
+				"type": "varchar"
+			},
+			{
+				"name": "experience",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "salary",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employees"
+		}
+	}
+}
